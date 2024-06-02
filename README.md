@@ -29,7 +29,7 @@ Para executar os projetos e exercícios, você precisará ter o Node.js e npm (o
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/monica88lima/`nome-do-repositorio`studos_React.git
+    git clone https://github.com/monica88lima/Estudos_React.git
     cd nome-do-repositorio
     ```
 
