@@ -10,6 +10,7 @@ import ShowUserName from "./Components/ShowUserName";
 import CarDetails from "./Components/CarDetails";
 import Container from "./Components/Container";
 import ShowMessage from "./Components/ShowMessage";
+import UserDetails from "./Components/UserDetails";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,11 @@ function App() {
     {id:2,km:300, marca:"Fiat", cor: "Vermelho"},
     {id:3,km:10000, marca:"SRV", cor: "Marrom"},
   ];
-
+  const UserDet = [
+    {id:1, nome:"Maria", idade:20, profissao: "Professora"},
+    {id:2, nome:"João", idade:15, profissao: "Estudante"},
+    {id:3, nome:"Josefa", idade:75, profissao: "Professora"},
+  ];
   function showMsg(){
     console.log("Exibiu a Mensagem Agora!")
 
@@ -34,7 +39,7 @@ function App() {
         <div>
           <img src={Noite} alt="noite" />
         </div>
-        <div>
+        <div className="comp">
         <ManageData />
         <ListRender />
         <CondicionalRender />
@@ -43,12 +48,18 @@ function App() {
         <CarDetails km={55000} marca="Fiat" cor="Preto"/>
         <ShowUserName name="Ellen"/>
         {cars.map((car)=>
-        (<CarDetails key={car.id} marca={car.marca} km={car.km} cor={car.cor} />))}
+        (<CarDetails key={car.id} marca={car.marca} km={car.km} cor={car.cor} />))
+        }
         <Container>
           <p>Algo escrito aqqui </p>
 
         </Container>
         <ShowMessage myfunction={showMsg}/>
+       
+        {UserDet.map((use)=>
+          (<UserDetails  key={use.id} nome={use.nome} idade={use.idade} profissao={use.profissao} />))
+        }
+        
 
       </div>
         
