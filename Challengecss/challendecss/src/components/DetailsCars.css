@@ -1,0 +1,15 @@
+.container-cars{
+  display: flex;
+  flex-direction: column;
+  align-items:center; /* Centraliza horizontalmente */
+  border-style: hidden;
+  border: 1px solid #ccc;
+  width: 550px;
+  padding: 16px;
+  margin: 32px;
+     
+}
+img{
+    width: 100px;
+    border-radius: 8px;
+}
